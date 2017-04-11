@@ -3,7 +3,7 @@
 library(ggplot2)
 
 fluidPage(
-  titlePanel("Basic DataTable"),
+  titlePanel("Decision Making with Visualizations: A Selective Review"),
   
   # Create a new Row in the UI for selectInputs
   fluidRow(

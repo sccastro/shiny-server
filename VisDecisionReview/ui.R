@@ -9,9 +9,9 @@ fluidPage(
   fluidRow(
     column(4,
            selectInput("man",
-                       "Manufacturer:",
+                       "Domain:",
                        c("All",
-                         unique(as.character(mpg$manufacturer))))
+                         unique(as.character(mpg2$Domain))))
     )
   ),
   # Create a new row for the table.

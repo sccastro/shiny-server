@@ -1,34 +1,25 @@
-library(maps)
-library(mapproj)
-counties <- readRDS("data/counties.rds")
-source("helpers.R")
 
-shinyServer(
-  function(input, output) {
-    output$map <- renderPlot({
-      data <- switch(input$var, 
-                     "Percent White" = counties$white,
-                     "Percent Black" = counties$black,
-                     "Percent Hispanic" = counties$hispanic,
-                     "Percent Asian" = counties$asian)
-      
-      color <- switch(input$var, 
-                      "Percent White" = "darkgreen",
-                      "Percent Black" = "black",
-                      "Percent Hispanic" = "darkorange",
-                      "Percent Asian" = "darkviolet")
-      
-      legend <- switch(input$var, 
-                       "Percent White" = "% White",
-                       "Percent Black" = "% Black",
-                       "Percent Hispanic" = "% Hispanic",
-                       "Percent Asian" = "% Asian")
-      
-      percent_map(var = data, 
-                  color = color, 
-                  legend.title = legend, 
-                  max = input$range[2], 
-                  min = input$range[1])
-    })
-  }
-)
+mpg <- readRDS("data.rds")
+
+# Load the ggplot2 package which provides
+# the 'mpg' dataset.
+#library(ggplot2)
+
+function(input, output) {
+  
+  # Filter data based on selections
+  output$table <- DT::renderDataTable(DT::datatable({
+    data <- mpg
+    if (input$man != "All") {
+      data <- data[data$manufacturer == input$man,]
+    }
+    if (input$cyl != "All") {
+      data <- data[data$cyl == input$cyl,]
+    }
+    if (input$trans != "All") {
+      data <- data[data$trans == input$trans,]
+    }
+    data
+  }))
+  
+}

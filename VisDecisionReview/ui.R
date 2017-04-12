@@ -1,6 +1,8 @@
 # Load the ggplot2 package which provides
 # the 'mpg' dataset.
-library(ggplot2)
+
+
+mpg2 <- readRDS("data.rds")
 
 fluidPage(
   titlePanel("Decision Making with Visualizations: A Selective Review"),

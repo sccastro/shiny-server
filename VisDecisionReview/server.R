@@ -13,7 +13,6 @@ function(input, output) {
     if (input$man != "All") {
       data <- data[data$manufacturer == input$man,]
     }
-   
     data
   }))
   

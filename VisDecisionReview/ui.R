@@ -31,8 +31,13 @@ fluidPage(
       h3("Why"),
       conditionalPanel(
         'input.dataset === "mpg2"',
-        checkboxGroupInput('show_vars', 'Data Type',
-                           c("Items", "Attributes", "Links", "Positions", "Grids"), selected = "Items")
+        checkboxGroupInput('show_vars', 'Search',
+                           c("Lookup", "Locate", "Browse", "Exsplore", "Identify"), selected = "Items")
+      ),
+      conditionalPanel(
+        'input.dataset === "mpg2"',
+        checkboxGroupInput('show_vars', 'Query',
+                           c("Identify", "Compare", "Summarize"), selected = "")
       ) 
     ),
     mainPanel(

@@ -13,12 +13,7 @@ fluidPage(
       conditionalPanel(
         'input.dataset === "mpg2"',
         checkboxGroupInput('show_vars', 'Data option',
-                           choiceNames =
-                             list(icon("N"), icon("UP")),
-                           choiceValues =
-                             list("N", "UP")
-                           #names(mpg2), selected = names(mpg2)
-                           )
+                           names(mpg2), selected = names(mpg2))
       )
     ),
     mainPanel(

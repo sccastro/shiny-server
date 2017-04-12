@@ -11,15 +11,15 @@ fluidPage(
   sidebarLayout(
     sidebarPanel(
       conditionalPanel(
-        'input.dataset === "diamonds"',
+        'input.dataset === "mpg2"',
         checkboxGroupInput('show_vars', 'Columns in diamonds to show:',
-                           names(diamonds), selected = names(diamonds))
+                           names(mpg2), selected = names(mpg2))
       )
     ),
     mainPanel(
       tabsetPanel(
         id = 'dataset',
-        tabPanel('diamonds', DT::dataTableOutput('mytable1'))
+        tabPanel('mpg2', DT::dataTableOutput('mytable1'))
       )
     )
   )

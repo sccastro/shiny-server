@@ -9,9 +9,8 @@ library(ggplot2)
 function(input, output) {
   
   # choose columns to display
-  diamonds2 = diamonds[sample(nrow(diamonds), 1000), ]
   output$mytable1 <- DT::renderDataTable({
-    DT::datatable(diamonds2[, input$show_vars, drop = FALSE])
+    DT::datatable(mpg2[, input$show_vars, drop = FALSE])
   })
   
   # sorted columns are colored now because CSS are attached to them

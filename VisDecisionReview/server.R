@@ -1,3 +1,5 @@
+
+
 mpg2 <- readRDS("data.rds")
 # Load the ggplot2 package which provides
 # the 'mpg' dataset.
@@ -7,7 +9,7 @@ function(input, output) {
   
   # Filter data based on selections
   output$table <- DT::renderDataTable(DT::datatable({
-    data <- mpg
+    data <- mpg2
     if (input$man != "All") {
       data <- data[data$manufacturer == input$man,]
     }

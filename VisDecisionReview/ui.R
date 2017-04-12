@@ -19,7 +19,7 @@ fluidPage(
       ),
       conditionalPanel(
         'input.dataset === "mpg2"',
-        checkboxGroupInput('show_vars', '',
+        checkboxGroupInput('show_v', '',
                            "UP", selected = "UP")
       )
     ),

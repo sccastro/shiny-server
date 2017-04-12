@@ -4,20 +4,34 @@
 
 mpg2 <- readRDS("data.rds")
 
+#library(shiny)
+library(ggplot2)  # for the diamonds dataset
+
 fluidPage(
-  titlePanel("Decision Making with Visualizations: A Selective Review"),
-  
-  # Create a new Row in the UI for selectInputs
-  fluidRow(
-    column(4,
-           selectInput("man",
-                       "Domain:",
-                       c("All",
-                         unique(as.character(mpg2$Domain))))
+  title = 'Examples of DataTables',
+  sidebarLayout(
+    sidebarPanel(
+      conditionalPanel(
+        'input.dataset === "diamonds"',
+        checkboxGroupInput('show_vars', 'Columns in diamonds to show:',
+                           names(diamonds), selected = names(diamonds))
+      ),
+      conditionalPanel(
+        'input.dataset === "mtcars"',
+        helpText('Click the column header to sort a column.')
+      ),
+      conditionalPanel(
+        'input.dataset === "iris"',
+        helpText('Display 5 records by default.')
+      )
+    ),
+    mainPanel(
+      tabsetPanel(
+        id = 'dataset',
+        tabPanel('diamonds', DT::dataTableOutput('mytable1')),
+        tabPanel('mtcars', DT::dataTableOutput('mytable2')),
+        tabPanel('iris', DT::dataTableOutput('mytable3'))
+      )
     )
-  ),
-  # Create a new row for the table.
-  fluidRow(
-    DT::dataTableOutput("table")
   )
 )

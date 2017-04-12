@@ -1,26 +1,24 @@
 
 
 mpg2 <- readRDS("data.rds")
+library(ggplot2)
 # Load the ggplot2 package which provides
 # the 'mpg' dataset.
-library(ggplot2)
-
-
 function(input, output) {
   
-  # choose columns to display
-  output$mytable1 <- DT::renderDataTable({
-    DT::datatable(mpg2[, input$show_vars, drop = FALSE])
-  })
-  
-  # sorted columns are colored now because CSS are attached to them
-  output$mytable2 <- DT::renderDataTable({
-    DT::datatable(mtcars, options = list(orderClasses = TRUE))
-  })
-  
-  # customize the length drop-down menu; display 5 rows per page by default
-  output$mytable3 <- DT::renderDataTable({
-    DT::datatable(iris, options = list(lengthMenu = c(5, 30, 50), pageLength = 5))
-  })
+  # Filter data based on selections
+  output$table <- DT::renderDataTable(DT::datatable({
+    data <- mpg
+    if (input$man != "All") {
+      data <- data[data$manufacturer == input$man,]
+    }
+    if (input$cyl != "All") {
+      data <- data[data$cyl == input$cyl,]
+    }
+    if (input$trans != "All") {
+      data <- data[data$trans == input$trans,]
+    }
+    data
+  }))
   
 }

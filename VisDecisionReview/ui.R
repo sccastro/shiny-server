@@ -7,6 +7,7 @@ mpg2 <- readRDS("data.rds")
 library(ggplot2)  # for the diamonds dataset
 
 
+group<- c("N", "Authors")
 
 fluidPage(
   title = 'Examples of DataTables',
@@ -15,12 +16,7 @@ fluidPage(
       conditionalPanel(
         'input.dataset === "mpg2"',
         checkboxGroupInput('show_vars', '',
-                           c("Authors", "Year", "N"), selected = c("Authors", "Year", "N"))
-      ),
-      conditionalPanel(
-        'input.dataset === "mpg2"',
-        checkboxGroupInput('show_vars', '',
-                           c("Authors", "Year", "N"), selected = c("Authors", "Year", "N"))
+                           group, selected = group)
       )
       
     ),

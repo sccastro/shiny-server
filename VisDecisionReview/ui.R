@@ -14,14 +14,6 @@ fluidPage(
         'input.dataset === "diamonds"',
         checkboxGroupInput('show_vars', 'Columns in diamonds to show:',
                            names(diamonds), selected = names(diamonds))
-      ),
-      conditionalPanel(
-        'input.dataset === "mtcars"',
-        helpText('Click the column header to sort a column.')
-      ),
-      conditionalPanel(
-        'input.dataset === "iris"',
-        helpText('Display 5 records by default.')
       )
     ),
     mainPanel(

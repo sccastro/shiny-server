@@ -14,20 +14,20 @@ fluidPage(
   # Create a new Row in the UI for selectInputs
   fluidRow(
     column(4,
-           selectInput("man",
-                       "Manufacturer:",
+           selectInput("UP",
+                       "UP:",
                        c("All",
                          unique(as.character(mpg2$UP))))
     ),
     column(4,
-           selectInput("trans",
-                       "Transmission:",
+           selectInput("Items",
+                       "Items:",
                        c("All",
                          unique(as.character(mpg2$Items))))
     ),
     column(4,
-           selectInput("cyl",
-                       "Cylinders:",
+           selectInput("Links",
+                       "Links:",
                        c("All",
                          unique(as.character(mpg2$Links))))
     )

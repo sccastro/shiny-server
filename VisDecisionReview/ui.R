@@ -12,7 +12,7 @@ fluidPage(
     sidebarPanel(
       conditionalPanel(
         'input.dataset === "mpg2"',
-        checkboxGroupInput('show_vars', 'Columns in diamonds to show:',
+        checkboxGroupInput('show_vars', 'Data option',
                            names(mpg2), selected = names(mpg2))
       )
     ),

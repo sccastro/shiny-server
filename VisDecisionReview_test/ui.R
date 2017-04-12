@@ -17,19 +17,19 @@ fluidPage(
            selectInput("man",
                        "Manufacturer:",
                        c("All",
-                         unique(as.character(mpg$manufacturer))))
+                         unique(as.character(mpg2$UP))))
     ),
     column(4,
            selectInput("trans",
                        "Transmission:",
                        c("All",
-                         unique(as.character(mpg$trans))))
+                         unique(as.character(mpg2$Items))))
     ),
     column(4,
            selectInput("cyl",
                        "Cylinders:",
                        c("All",
-                         unique(as.character(mpg$cyl))))
+                         unique(as.character(mpg2$Links))))
     )
   ),
   # Create a new row for the table.

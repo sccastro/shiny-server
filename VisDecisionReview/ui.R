@@ -15,10 +15,14 @@ fluidPage(
       conditionalPanel(
         'input.dataset === "mpg2"',
         checkboxGroupInput('show_vars', '',
-                           c("Authors", "Year", "N"), selected = c("Authors", "Year", "N"),
-        checkboxGroupInput('show_vars', '',
-                           "UP", selected = "UP"))
-      )
+                           c("Authors", "Year", "N"), selected = c("Authors", "Year", "N"))
+      ),
+      sidebarPanel(
+        conditionalPanel(
+          'input.dataset === "mpg2"',
+          checkboxGroupInput('show_vars', '',
+                             "UP", selected = "UP")
+        )
     ),
     mainPanel(
       tabsetPanel(

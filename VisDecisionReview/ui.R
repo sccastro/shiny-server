@@ -16,6 +16,11 @@ fluidPage(
         'input.dataset === "mpg2"',
         checkboxGroupInput('show_vars', '',
                            c("Authors", "Year", "N"), selected = c("Authors", "Year", "N"))
+      ),
+      conditionalPanel(
+        'input.dataset === "mpg2"',
+        checkboxGroupInput('show_vars', '',
+                           c("Authors", "Year", "N"), selected = c("Authors", "Year", "N"))
       )
       
     ),

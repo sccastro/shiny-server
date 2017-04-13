@@ -14,9 +14,7 @@ fluidPage(
   # Create a new Row in the UI for selectInputs
   sidebarLayout(
     
-    column(4, offset = 4,
-           h2("4 offset 4")
-    ),      
+        
     column(4,
            selectInput("TaskType",
                        "Task Type:",

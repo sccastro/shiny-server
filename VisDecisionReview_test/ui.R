@@ -14,22 +14,22 @@ fluidPage(
   # Create a new Row in the UI for selectInputs
   fluidRow(
     column(4,
-           selectInput("Identify",
-                       "Manufacturer:",
+           selectInput("TaskType",
+                       "Task Type:",
                        c("All",
-                         unique(as.character(mpg2$Identify))))
+                         unique(as.character(mpg2$TaskType))))
     ),
     column(4,
-           selectInput("Select",
-                       "Transmission:",
+           selectInput("DataType",
+                       "Data Type:",
                        c("All",
-                         unique(as.character(mpg2$Select))))
+                         unique(as.character(mpg2$DataType))))
     ),
     column(4,
-           selectInput("Navigate",
-                       "Cylinders:",
+           selectInput("Users",
+                       "Users:",
                        c("All",
-                         unique(as.character(mpg2$Navigate))))
+                         unique(as.character(mpg2$Users))))
     )
   ),
   # Create a new row for the table.

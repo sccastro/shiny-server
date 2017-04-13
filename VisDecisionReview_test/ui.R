@@ -13,6 +13,13 @@ fluidPage(
   
   # Create a new Row in the UI for selectInputs
   fluidRow(
+    column(2, 
+           conditionalPanel(
+             'input.dataset === "mpg2"',
+             checkboxGroupInput('show_vars', 'Data Options',
+                                names(mpg2), selected = c("Authors", "Year", "Domain"))
+           )
+    ),
     
   column(10,
     fluidRow(
@@ -36,16 +43,7 @@ fluidPage(
     )
   ),
   # Create a new row for the table.
-  fluidRow(4,
-    DT::dataTableOutput("table"))),
-  
-  
-  column(2, 
-         conditionalPanel(
-           'input.dataset === "mpg2"',
-           checkboxGroupInput('show_vars', 'Data Options',
-                              names(mpg2), selected = c("Authors", "Year", "Domain"))
-         )
-  )
+  fluidRow(
+    DT::dataTableOutput("table")))
   )
 )

@@ -10,7 +10,9 @@ library(ggplot2)
 
 fluidPage(
   titlePanel("Basic DataTable"),
-  
+  sidebarLayout(
+    sidebarPanel(),
+    mainPanel(
   # Create a new Row in the UI for selectInputs
   fluidRow(
     column(4,
@@ -36,4 +38,4 @@ fluidPage(
   fluidRow(
     DT::dataTableOutput("table")
   )
-)
+))

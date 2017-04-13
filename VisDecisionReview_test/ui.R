@@ -12,26 +12,24 @@ fluidPage(
   titlePanel("Basic DataTable"),
   
   # Create a new Row in the UI for selectInputs
-  sidebarLayout(
-    
-        
+  fluidRow(
     column(4,
            selectInput("UP",
-                       "UP:",
+                       "Manufacturer:",
                        c("All",
                          unique(as.character(mpg2$UP))))
     ),
     column(4,
            selectInput("VDAR",
-                       "VDAR:",
+                       "Transmission:",
                        c("All",
                          unique(as.character(mpg2$VDAR))))
     ),
     column(4,
            selectInput("UWP",
-                       "UWP:",
+                       "Cylinders:",
                        c("All",
-                         unique(as.character(mpg2$UWP)))
+                         unique(as.character(mpg2$UWP))))
     )
   ),
   # Create a new row for the table.

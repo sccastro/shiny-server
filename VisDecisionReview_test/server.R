@@ -9,7 +9,7 @@ function(input, output) {
   # Filter data based on selections
   output$table <- DT::renderDataTable(DT::datatable({
     data <- mpg2
-    if (input$UP != "All") {
+    if (input$Identify != "All") {
       data <- data[data$Identify == input$Identify,]
     }
     if (input$Select != "All") {

@@ -13,8 +13,8 @@ fluidPage(
   
   # Create a new Row in the UI for selectInputs
   fluidRow(
-    column(2,
-           "sidebar"
+    column(3, offset = 3,
+           "3 offset 3"
     ),
     
     column(4,

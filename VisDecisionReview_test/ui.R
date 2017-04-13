@@ -13,6 +13,10 @@ fluidPage(
   
   # Create a new Row in the UI for selectInputs
   fluidRow(
+    column(2,
+           "sidebar"
+    ),
+    
     column(4,
            selectInput("TaskType",
                        "Task Type:",

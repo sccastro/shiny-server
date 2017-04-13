@@ -13,7 +13,7 @@ fluidPage(
   
   # Create a new Row in the UI for selectInputs
   fluidRow(
-    column(4, 
+    column(2, 
            conditionalPanel(
              'input.dataset === "mpg2"',
              checkboxGroupInput('show_vars', 'Data Options',
@@ -21,7 +21,9 @@ fluidPage(
            )
     ),
     
-    column(4,
+  column(10,
+    fluidRow(
+     column(4,
            selectInput("TaskType",
                        "Task Type:",
                        c("All",
@@ -42,6 +44,6 @@ fluidPage(
   ),
   # Create a new row for the table.
   fluidRow(
-    DT::dataTableOutput("table")
+    DT::dataTableOutput("table")))
   )
 )

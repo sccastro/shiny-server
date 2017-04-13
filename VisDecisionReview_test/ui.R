@@ -17,13 +17,13 @@ fluidPage(
         
     column(4,
            selectInput("TaskType",
-                       "Task Type:",
+                       "TaskType:",
                        c("All",
                          unique(as.character(mpg2$TaskType))))
     ),
     column(4,
            selectInput("DataType",
-                       "Data Type:",
+                       "DataType:",
                        c("All",
                          unique(as.character(mpg2$DataType))))
     ),

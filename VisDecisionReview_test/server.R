@@ -7,6 +7,11 @@ library(ggplot2)
 function(input, output) {
   
   # Filter data based on selections
+  output$table <- DT::renderDataTable({
+    DT::datatable(mpg2[, input$show_vars, drop = FALSE])
+  })
+  
+  
   output$table <- DT::renderDataTable(DT::datatable({
     data <- mpg2
     if (input$TaskType != "All") {

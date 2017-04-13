@@ -12,7 +12,10 @@ fluidPage(
   titlePanel("Basic DataTable"),
   
   # Create a new Row in the UI for selectInputs
-  fluidRow(
+  sidebarLayout(
+    column(4, offset = 4,
+           "4 offset 4"
+    ),      
     column(4,
            selectInput("TaskType",
                        "Task Type:",

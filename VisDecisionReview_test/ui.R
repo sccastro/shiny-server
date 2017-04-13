@@ -13,7 +13,7 @@ fluidPage(
   
   # Create a new Row in the UI for selectInputs
   fluidRow(
-    column(3, offset = 3,
+    column(4, 
            conditionalPanel(
              'input.dataset === "mpg2"',
              checkboxGroupInput('show_vars', 'Data Options',

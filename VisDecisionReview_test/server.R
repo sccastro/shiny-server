@@ -1,6 +1,6 @@
 
 
-mpg2 <- readRDS("data.rds")
+mpg2 <- readRDS("data2.rds")
 library(ggplot2)
 # Load the ggplot2 package which provides
 # the 'mpg' dataset.

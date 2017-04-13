@@ -10,13 +10,13 @@ function(input, output) {
   output$table <- DT::renderDataTable(DT::datatable({
     data <- mpg2
     if (input$UP != "All") {
-      data <- data[data$UP == input$UP,]
+      data <- data[data$Identify == input$Identify,]
     }
-    if (input$VDAR != "All") {
-      data <- data[data$VDAR == input$VDAR,]
+    if (input$Select != "All") {
+      data <- data[data$Select == input$Select,]
     }
-    if (input$UWP != "All") {
-      data <- data[data$UWp == input$UWP,]
+    if (input$Navigate != "All") {
+      data <- data[data$Navigate == input$Navigate,]
     }
     data
   }))

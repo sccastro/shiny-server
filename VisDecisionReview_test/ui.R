@@ -16,22 +16,22 @@ fluidPage(
     
         
     column(4,
-           selectInput("TaskType",
-                       "TaskType:",
+           selectInput("UP",
+                       "UP:",
                        c("All",
-                         unique(as.character(mpg2$TaskType))))
+                         unique(as.character(mpg2$UP))))
     ),
     column(4,
-           selectInput("DataType",
-                       "DataType:",
+           selectInput("VDAR",
+                       "VDAR:",
                        c("All",
-                         unique(as.character(mpg2$DataType))))
+                         unique(as.character(mpg2$VDAR))))
     ),
     column(4,
-           selectInput("Users",
-                       "Users:",
+           selectInput("UWP",
+                       "UWP:",
                        c("All",
-                         unique(as.character(mpg2$Users))))
+                         unique(as.character(mpg2$UWP)))
     )
   ),
   # Create a new row for the table.

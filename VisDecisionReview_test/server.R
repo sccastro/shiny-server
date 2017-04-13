@@ -9,14 +9,14 @@ function(input, output) {
   # Filter data based on selections
   output$table <- DT::renderDataTable(DT::datatable({
     data <- mpg2
-    if (input$TaskType != "All") {
-      data <- data[data$TaskType == input$TaskType,]
+    if (input$UP != "All") {
+      data <- data[data$UP == input$UP,]
     }
-    if (input$DataType != "All") {
-      data <- data[data$DataType == input$DataType,]
+    if (input$VDAR != "All") {
+      data <- data[data$VDAR == input$VDAR,]
     }
-    if (input$Users != "All") {
-      data <- data[data$Users == input$Users,]
+    if (input$UWP != "All") {
+      data <- data[data$UWp == input$UWP,]
     }
     data
   }))

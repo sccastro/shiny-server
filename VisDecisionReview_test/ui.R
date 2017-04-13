@@ -36,7 +36,7 @@ fluidPage(
     )
   ),
   # Create a new row for the table.
-  fluidRow(
+  fluidRow(4,
     DT::dataTableOutput("table"))),
   
   

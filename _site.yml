@@ -1,6 +1,6 @@
 name: "my-website"
 navbar:
-  title: "My Website"
+  title: "Spencer's Shiny Site"
   left:
     - text: "Home"
       href: index.html
@@ -8,3 +8,5 @@ navbar:
       href: 1-example.html
     - text: "Terrain Colors"
       href: 3-inline.html
+    - text: "Apps"
+      href: sample-apps

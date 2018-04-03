@@ -9,7 +9,7 @@ navbar:
   - text: Terrain Colors
     href: 3-inline.html
   - text: Shiny Apps
-    href: 'sample-apps'
+    href: sample-apps
 output_dir: _site
 output:
   html_document:

@@ -3,7 +3,7 @@ navbar:
   title: Spencer's Shiny Server
   left:
   - text: Home
-    href: spencercastro.com
+    href: .
   - text: Viridis Colors
     href: 1-example.html
   - text: Terrain Colors

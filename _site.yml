@@ -3,7 +3,7 @@ navbar:
   title: "Spencer's Shiny Site"
   left:
     - text: "Home"
-      href: index.html
+      href: https://www.spencercastro.com
     - text: "Viridis Colors"
       href: 1-example.html
     - text: "Terrain Colors"

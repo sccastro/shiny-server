@@ -1,6 +1,7 @@
 ---
 title: "About R Markdown"
 output: html_document
+runtime: shiny
 ---
 
 <style type="text/css">
@@ -31,3 +32,13 @@ R Markdown has many available output formats including [HTML](http://rmarkdown.r
 <div class="col-sm-6">
 
 ![](images/RMarkdownOutputFormats.png)
+
+```{r, echo=FALSE}
+library(shiny)
+shinyAppDir(appDir = "./_sample-apps",
+  options = list(width = "100%", height = 700)
+)
+```
+
+
+

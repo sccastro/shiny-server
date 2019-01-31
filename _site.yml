@@ -9,4 +9,4 @@ navbar:
     - text: "Terrain Colors"
       href: 3-inline.html
     - text: "Apps"
-      href: sample-apps
+      href: _sample-apps

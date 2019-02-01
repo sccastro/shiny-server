@@ -5,7 +5,7 @@ navbar:
     - text: "Home"
       href: https://www.spencercastro.com
     - text: "Viridis Colors"
-      href: ./1-example.Rmd
+      href: https://www.spencercastro.com/1-example.Rmd
     - text: "Terrain Colors"
       href: ./3-inline.Rmd
     - text: "Apps"

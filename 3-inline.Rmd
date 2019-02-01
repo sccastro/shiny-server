@@ -1,6 +1,7 @@
 ---
 title: "More colors"
 output: html_document
+runtime: shiny
 ---
 
 ```{r include = FALSE}

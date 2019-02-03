@@ -1,286 +1,0 @@
-]0;~/Documents/shiny-server[?1034hspencers-air:shiny-server spencercastro$ [Kspencers-air:shiny-server spencercastro$ ssh
-ssh          ssh-add      ssh-agent    ssh-copy-id  ssh-keygen   ssh-keyscan  sshd         
-spencers-air:shiny-server spencercastro$ ssh 1[K167.99.171.35
-spencercastro@167.99.171.35: Permission denied (publickey).
-]0;~/Documents/shiny-serverspencers-air:shiny-server spencercastro$ ssh 167.99.171.35r167.99.171.35o167.99.171.35o167.99.171.35t167.99.171.35@167.99.171.35
-Enter passphrase for key '/Users/spencercastro/.ssh/id_rsa': 
-Welcome to Ubuntu 16.04.4 LTS (GNU/Linux 4.4.0-121-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-  Get cloud support with Ubuntu Advantage Cloud Guest:
-    http://www.ubuntu.com/business/services/cloud
-
-3 packages can be updated.
-0 updates are security updates.
-
-
-Last login: Thu Apr 26 16:17:24 2018 from 128.110.238.0
-]0;root@spencer-512-sfo2: ~root@spencer-512-sfo2:~# ls
-]0;root@spencer-512-sfo2: ~root@spencer-512-sfo2:~# cd ..
-]0;root@spencer-512-sfo2: /root@spencer-512-sfo2:/# ls
-[0m[01;32mapt-remove-duplicate-source-entries.py[0m  [01;34metc[0m             [01;34mlib[0m         [01;34mmnt[0m   [01;31mrstudio-server-1.1.442-amd64.deb[0m  [01;34msnap[0m  [01;34musr[0m
-[01;34mbin[0m                                     [01;34mhome[0m            [01;34mlib64[0m       [01;34mopt[0m   [01;34mrun[0m                               [01;34msrv[0m   [01;34mvar[0m
-[01;34mboot[0m                                    [01;36minitrd.img[0m      [01;34mlost+found[0m  [01;34mproc[0m  [01;34msbin[0m                              [01;34msys[0m   [01;36mvmlinuz[0m
-[01;34mdev[0m                                     [01;36minitrd.img.old[0m  [01;34mmedia[0m       [01;34mroot[0m  [01;31mshiny-server-1.5.7.907-amd64.deb[0m  [30;42mtmp[0m   [01;36mvmlinuz.old[0m
-]0;root@spencer-512-sfo2: /root@spencer-512-sfo2:/# lscd ..[3Plssudo nano /etc/nginx/sites-enabled/spencercastro.com
->]0;root@spencer-512-sfo2: /root@spencer-512-sfo2:/# sudo rm -f /etc/nginx/sites-enabled/default
-]0;root@spencer-512-sfo2: /root@spencer-512-sfo2:/# sudo nginx -t
-nginx: [emerg] a duplicate default server for 0.0.0.0:80 in /etc/nginx/sites-enabled/spencercastro.com.save:2
-nginx: configuration file /etc/nginx/nginx.conf test failed
-]0;root@spencer-512-sfo2: /root@spencer-512-sfo2:/# cd etc[K[K[K/etc/n
-network/ newt/    nginx/   
-]0;root@spencer-512-sfo2: /root@spencer-512-sfo2:/# cd /etc/nginx/set[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksls
-No command 'sls' found, but there are 22 similar ones
-sls: command not found
-]0;root@spencer-512-sfo2: /root@spencer-512-sfo2:/# ls
-[0m[01;32mapt-remove-duplicate-source-entries.py[0m  [01;34metc[0m             [01;34mlib[0m         [01;34mmnt[0m   [01;31mrstudio-server-1.1.442-amd64.deb[0m  [01;34msnap[0m  [01;34musr[0m
-[01;34mbin[0m                                     [01;34mhome[0m            [01;34mlib64[0m       [01;34mopt[0m   [01;34mrun[0m                               [01;34msrv[0m   [01;34mvar[0m
-[01;34mboot[0m                                    [01;36minitrd.img[0m      [01;34mlost+found[0m  [01;34mproc[0m  [01;34msbin[0m                              [01;34msys[0m   [01;36mvmlinuz[0m
-[01;34mdev[0m                                     [01;36minitrd.img.old[0m  [01;34mmedia[0m       [01;34mroot[0m  [01;31mshiny-server-1.5.7.907-amd64.deb[0m  [30;42mtmp[0m   [01;36mvmlinuz.old[0m
-]0;root@spencer-512-sfo2: /root@spencer-512-sfo2:/# cd etc/nginx/sites-enabled/
-]0;root@spencer-512-sfo2: /etc/nginx/sites-enabledroot@spencer-512-sfo2:/etc/nginx/sites-enabled# ls
-[0m[01;36mspencercastro.com[0m  spencercastro.com.save
-]0;root@spencer-512-sfo2: /etc/nginx/sites-enabledroot@spencer-512-sfo2:/etc/nginx/sites-enabled# sudo nano se[Kpencercastro.com.save
->]0;root@spencer-512-sfo2: /etc/nginx/sites-enabledroot@spencer-512-sfo2:/etc/nginx/sites-enabled# sudo rm -f spencercastro.com.save
-]0;root@spencer-512-sfo2: /etc/nginx/sites-enabledroot@spencer-512-sfo2:/etc/nginx/sites-enabled# ls
-[0m[01;36mspencercastro.com[0m
-]0;root@spencer-512-sfo2: /etc/nginx/sites-enabledroot@spencer-512-sfo2:/etc/nginx/sites-enabled# cd
-]0;root@spencer-512-sfo2: ~root@spencer-512-sfo2:~# ls
-]0;root@spencer-512-sfo2: ~root@spencer-512-sfo2:~# cd ..
-]0;root@spencer-512-sfo2: /root@spencer-512-sfo2:/# ls
-[0m[01;32mapt-remove-duplicate-source-entries.py[0m  [01;34metc[0m             [01;34mlib[0m         [01;34mmnt[0m   [01;31mrstudio-server-1.1.442-amd64.deb[0m  [01;34msnap[0m  [01;34musr[0m
-[01;34mbin[0m                                     [01;34mhome[0m            [01;34mlib64[0m       [01;34mopt[0m   [01;34mrun[0m                               [01;34msrv[0m   [01;34mvar[0m
-[01;34mboot[0m                                    [01;36minitrd.img[0m      [01;34mlost+found[0m  [01;34mproc[0m  [01;34msbin[0m                              [01;34msys[0m   [01;36mvmlinuz[0m
-[01;34mdev[0m                                     [01;36minitrd.img.old[0m  [01;34mmedia[0m       [01;34mroot[0m  [01;31mshiny-server-1.5.7.907-amd64.deb[0m  [30;42mtmp[0m   [01;36mvmlinuz.old[0m
-]0;root@spencer-512-sfo2: /root@spencer-512-sfo2:/# sudo nginx -t
-nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
-nginx: configuration file /etc/nginx/nginx.conf test is successful
-]0;root@spencer-512-sfo2: /root@spencer-512-sfo2:/# sudo service nginx restart
-]0;root@spencer-512-sfo2: /root@spencer-512-sfo2:/# exit
-logout
-Connection to 167.99.171.35 closed.
-]0;~/Documents/shiny-serverspencers-air:shiny-server spencercastro$ ls
-index.html	sample-apps
-[Kspencers-air-2:shiny-server spencercastro$ ssh root@167.99.171.35
-Enter passphrase for key '/Users/spencercastro/.ssh/id_rsa': 
-Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 4.4.0-141-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-  Get cloud support with Ubuntu Advantage Cloud Guest:
-    http://www.ubuntu.com/business/services/cloud
-
-2 packages can be updated.
-0 updates are security updates.
-
-New release '18.04.1 LTS' available.
-Run 'do-release-upgrade' to upgrade to it.
-
-
-Last login: Fri Feb  1 20:24:37 2019 from 155.98.131.5
-]0;root@spencer-512-sfo2: ~root@spencer-512-sfo2:~# cd ..
-]0;root@spencer-512-sfo2: /root@spencer-512-sfo2:/# ls
-[0m[01;32mapt-remove-duplicate-source-entries.py[0m  [01;34mproc[0m
-[01;34mbin[0m                                     [01;34mroot[0m
-[01;34mboot[0m                                    [01;31mrstudio-server-1.1.463-amd64.deb[0m
-[01;32mcertbot-auto[0m                            [01;34mrun[0m
-[01;34mdev[0m                                     [01;34msbin[0m
-[01;34metc[0m                                     [01;31mshiny-server-1.5.7.907-amd64.deb[0m
-[01;34mhome[0m                                    [01;34msnap[0m
-[01;36minitrd.img[0m                              [01;34msrv[0m
-[01;36minitrd.img.old[0m                          [01;34msys[0m
-[01;34mlib[0m                                     [30;42mtmp[0m
-[01;34mlib64[0m                                   [01;34musr[0m
-[01;34mlost+found[0m                              [01;34mvar[0m
-[01;34mmedia[0m                                   [01;36mvmlinuz[0m
-[01;34mmnt[0m                                     [01;36mvmlinuz.old[0m
-[01;34mopt[0m
-]0;root@spencer-512-sfo2: /root@spencer-512-sfo2:/# cd var/www/html
-]0;root@spencer-512-sfo2: /var/www/htmlroot@spencer-512-sfo2:/var/www/html# ls
-about.html                   [0m[01;34mincludes[0m     [01;34mmarkdown[0m
-about.php                    index1.html  [01;34mRstudio-server[0m
-[01;34massets[0m                       index1.php   [01;34mshiny-server[0m
-google2c56e7f328cd7093.html  index.html   sitemap.xml
-header.html                  index.php    [01;35msite_under_construction.gif[0m
-]0;root@spencer-512-sfo2: /var/www/htmlroot@spencer-512-sfo2:/var/www/html# cd shiny-server
-]0;root@spencer-512-sfo2: /var/www/html/shiny-serverroot@spencer-512-sfo2:/var/www/html/shiny-server# ls
-1-example.Rmd  exampleconfig.txt  index.Rmd    [0m[01;34msample-apps[0m         [01;34m_site[0m
-3-inline.Rmd   [01;34mimages[0m             R-3.4.4.pkg  shiny-server.Rproj  _site.yml
-]0;root@spencer-512-sfo2: /var/www/html/shiny-serverroot@spencer-512-sfo2:/var/www/html/shiny-server# vim _site.yml
-]0;root@spencer-512-sfo2: /var/www/html/shiny-serverroot@spencer-512-sfo2:/var/www/html/shiny-server# ^C
-]0;root@spencer-512-sfo2: /var/www/html/shiny-serverroot@spencer-512-sfo2:/var/www/html/shiny-server# ^C
-]0;root@spencer-512-sfo2: /var/www/html/shiny-serverroot@spencer-512-sfo2:/var/www/html/shiny-server# ^C
-]0;root@spencer-512-sfo2: /var/www/html/shiny-serverroot@spencer-512-sfo2:/var/www/html/shiny-server# ^C
-]0;root@spencer-512-sfo2: /var/www/html/shiny-serverroot@spencer-512-sfo2:/var/www/html/shiny-server# ^C
-]0;root@spencer-512-sfo2: /var/www/html/shiny-serverroot@spencer-512-sfo2:/var/www/html/shiny-server# ^C
-ls
-1-example.Rmd		_site.yml		sample-apps
-3-inline.Rmd		exampleconfig.txt	shiny-server.Rproj
-R-3.4.4.pkg		images
-_site			index.Rmd
-]0;~/Documents/spencersite/shiny-serverspencers-air-2:shiny-server spencercastro$ cd ..
-]0;~/Documents/spencersitespencers-air-2:spencersite spencercastro$ ls
-Rstudio-server			index.html
-_notes				index.php
-about.html			index1.html
-about.php			index1.php
-assets				markdown
-google2c56e7f328cd7093.html	shiny-server
-header.html			site_under_construction.gif
-includes			sitemap.xml
-]0;~/Documents/spencersitespencers-air-2:spencersite spencercastro$ gi [Kt fetch origin
-Enter passphrase for key '/Users/spencercastro/.ssh/id_rsa': 
-remote: Enumerating objects: 22, done.[K
-remote: Counting objects:   4% (1/22)   [Kremote: Counting objects:   9% (2/22)   [Kremote: Counting objects:  13% (3/22)   [Kremote: Counting objects:  18% (4/22)   [Kremote: Counting objects:  22% (5/22)   [Kremote: Counting objects:  27% (6/22)   [Kremote: Counting objects:  31% (7/22)   [Kremote: Counting objects:  36% (8/22)   [Kremote: Counting objects:  40% (9/22)   [Kremote: Counting objects:  45% (10/22)   [Kremote: Counting objects:  50% (11/22)   [Kremote: Counting objects:  54% (12/22)   [Kremote: Counting objects:  59% (13/22)   [Kremote: Counting objects:  63% (14/22)   [Kremote: Counting objects:  68% (15/22)   [Kremote: Counting objects:  72% (16/22)   [Kremote: Counting objects:  77% (17/22)   [Kremote: Counting objects:  81% (18/22)   [Kremote: Counting objects:  86% (19/22)   [Kremote: Counting objects:  90% (20/22)   [Kremote: Counting objects:  95% (21/22)   [Kremote: Counting objects: 100% (22/22)   [Kremote: Counting objects: 100% (22/22), done.[K
-remote: Compressing objects:  33% (1/3)   [Kremote: Compressing objects:  66% (2/3)   [Kremote: Compressing objects: 100% (3/3)   [Kremote: Compressing objects: 100% (3/3), done.[K
-remote: Total 15 (delta 12), reused 15 (delta 12), pack-reused 0[K
-Unpacking objects:   6% (1/15)   Unpacking objects:  13% (2/15)   Unpacking objects:  20% (3/15)   Unpacking objects:  26% (4/15)   Unpacking objects:  33% (5/15)   Unpacking objects:  40% (6/15)   Unpacking objects:  46% (7/15)   Unpacking objects:  53% (8/15)   Unpacking objects:  60% (9/15)   Unpacking objects:  66% (10/15)   Unpacking objects:  73% (11/15)   Unpacking objects:  80% (12/15)   Unpacking objects:  86% (13/15)   Unpacking objects:  93% (14/15)   Unpacking objects: 100% (15/15)   Unpacking objects: 100% (15/15), done.
-From github.com:sccastro/spencersite
-   7d28655..630d44e  RmarkdownTests -> origin/RmarkdownTests
-]0;~/Documents/spencersitespencers-air-2:spencersite spencercastro$ git checkout -b master origin/master
-fatal: A branch named 'master' already exists.
-]0;~/Documents/spencersitespencers-air-2:spencersite spencercastro$ git merge Rmarkdown [KTests
-Already up-to-date.
-]0;~/Documents/spencersitespencers-air-2:spencersite spencercastro$ git checkout Rmarkdwo[K[KownTests
-Already on 'RmarkdownTests'
-Your branch is behind 'origin/RmarkdownTests' by 1 commit, and can be fast-forwarded.
-  (use "git pull" to update your local branch)
-]0;~/Documents/spencersitespencers-air-2:spencersite spencercastro$ git merge --no-ff master
-Removing shiny-server/shiny-server.Rproj
-Removing shiny-server/sample-apps/app.R
-Removing shiny-server/index.Rmd
-Removing shiny-server/images/RMarkdownOutputFormats.png
-Removing shiny-server/exampleconfig.txt
-CONFLICT (modify/delete): shiny-server/_site.yml deleted in master and modified in HEAD. Version HEAD of shiny-server/_site.yml left in tree.
-Removing shiny-server/R-3.4.4.pkg
-Removing shiny-server/3-inline.Rmd
-Removing shiny-server/1-example.Rmd
-Removing shiny-server/.gitignore
-Removing Rstudio-server
-Automatic merge failed; fix conflicts and then commit the result.
-]0;~/Documents/spencersitespencers-air-2:spencersite spencercastro$ git rm shiny-server/_site.yml
-shiny-server/_site.yml: needs merge
-rm 'shiny-server/_site.yml'
-]0;~/Documents/spencersitespencers-air-2:spencersite spencercastro$ git push origin RmarkdownTests
-Enter passphrase for key '/Users/spencercastro/.ssh/id_rsa': 
-To git@github.com:sccastro/spencersite.git
- ! [rejected]        RmarkdownTests -> RmarkdownTests (non-fast-forward)
-error: failed to push some refs to 'git@github.com:sccastro/spencersite.git'
-hint: Updates were rejected because the tip of your current branch is behind
-hint: its remote counterpart. Integrate the remote changes (e.g.
-hint: 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-]0;~/Documents/spencersitespencers-air-2:spencersite spencercastro$ git pull
-error: You have not concluded your merge (MERGE_HEAD exists).
-hint: Please, commit your changes before merging.
-fatal: Exiting because of unfinished merge.
-]0;~/Documents/spencersitespencers-air-2:spencersite spencercastro$ git comit[K[K[K[K[K[K[K[K[Kgit status
-On branch RmarkdownTests
-Your branch is behind 'origin/RmarkdownTests' by 1 commit, and can be fast-forwarded.
-  (use "git pull" to update your local branch)
-All conflicts fixed but you are still merging.
-  (use "git commit" to conclude merge)
-
-Changes to be committed:
-
-	[32mdeleted:    Rstudio-server[m
-	[32mdeleted:    shiny-server/.gitignore[m
-	[32mdeleted:    shiny-server/1-example.Rmd[m
-	[32mdeleted:    shiny-server/3-inline.Rmd[m
-	[32mdeleted:    shiny-server/R-3.4.4.pkg[m
-	[32mdeleted:    shiny-server/_site.yml[m
-	[32mdeleted:    shiny-server/exampleconfig.txt[m
-	[32mdeleted:    shiny-server/images/RMarkdownOutputFormats.png[m
-	[32mdeleted:    shiny-server/index.Rmd[m
-	[32mdeleted:    shiny-server/sample-apps/app.R[m
-	[32mdeleted:    shiny-server/shiny-server.Rproj[m
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	[31mshiny-server/.Rhistory[m
-
-]0;~/Documents/spencersitespencers-air-2:spencersite spencercastro$ git commit
-[?2004h[RmarkdownTests 61c4d9f] Merge branch 'master' into RmarkdownTests
-]0;~/Documents/spencersitespencers-air-2:spencersite spencercastro$ ls
-Rstudio-server			index.html
-_notes				index.php
-about.html			index1.html
-about.php			index1.php
-assets				markdown
-google2c56e7f328cd7093.html	shiny-server
-header.html			site_under_construction.gif
-includes			sitemap.xml
-]0;~/Documents/spencersitespencers-air-2:spencersite spencercastro$ git rm shiny-server
-fatal: not removing 'shiny-server' recursively without -r
-ls
-1-example.Rmd		_site.yml		sample-apps
-3-inline.Rmd		exampleconfig.txt	shiny-server.Rproj
-R-3.4.4.pkg		images
-_notes			index.Rmd
-]0;~/Documents/shiny-serverSpencers-MacBook-Air-2:shiny-server spencercastro$ rm -rf .git
-]0;~/Documents/shiny-serverSpencers-MacBook-Air-2:shiny-server spencercastro$ ls
-1-example.Rmd		_site.yml		sample-apps
-3-inline.Rmd		exampleconfig.txt	shiny-server.Rproj
-R-3.4.4.pkg		images
-_notes			index.Rmd
-]0;~/Documents/shiny-serverSpencers-MacBook-Air-2:shiny-server spencercastro$ ls -la
-total 172440
-drwxr-xr-x@ 17 spencercastro  staff       544 Feb  2 17:11 .
-drwx------+ 24 spencercastro  staff       768 Feb  1 16:35 ..
--rw-r--r--@  1 spencercastro  staff      6148 Feb  1 16:35 .DS_Store
--rw-r--r--   1 spencercastro  staff      2586 Feb  1 11:22 .RData
--rw-r--r--   1 spencercastro  staff      1259 Feb  1 17:17 .Rhistory
-drwxr-xr-x   4 spencercastro  staff       128 Mar 21  2018 .Rproj.user
--rw-r--r--   1 spencercastro  staff        40 Feb  2 17:09 .gitignore
--rw-r--r--   1 spencercastro  staff       455 Feb  1 10:19 1-example.Rmd
--rw-r--r--   1 spencercastro  staff       472 Feb  1 10:20 3-inline.Rmd
--rw-r--r--   1 spencercastro  staff  77265705 Jan 31 09:42 R-3.4.4.pkg
-drwxr-xr-x   3 spencercastro  staff        96 Feb  1 13:58 _notes
--rw-r--r--   1 spencercastro  staff       328 Feb  1 14:12 _site.yml
--rw-r--r--   1 spencercastro  staff      2658 Jan 31 09:42 exampleconfig.txt
-drwxr-xr-x   4 spencercastro  staff       128 Feb  1 13:47 images
--rw-r--r--   1 spencercastro  staff      1634 Feb  1 10:21 index.Rmd
-drwxr-xr-x   4 spencercastro  staff       128 Feb  1 13:47 sample-apps
--rw-r--r--@  1 spencercastro  staff       225 Feb  2 17:09 shiny-server.Rproj
-git init
-Initialized empty Git repository in /Users/spencercastro/Documents/shiny-server/.git/
-]0;~/Documents/shiny-serverSpencers-MacBook-Air-2:shiny-server spencercastro$ git remote add origin sccas[K[K[K[K[Khttps: //github.com/sccastro/shiny-server
-]0;~/Documents/shiny-serverSpencers-MacBook-Air-2:shiny-server spencercastro$ git puss[Kh origin [K[K[K[K[K[K[K[K[K[K[K[Kcheckout branch Rmarkdwo [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kow n[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cw nTests[K[Kts
-error: pathspec 'branch' did not match any file(s) known to git.
-error: pathspec 'RmarkdownTests' did not match any file(s) known to git.
-]0;~/Documents/shiny-serverSpencers-MacBook-Air-2:shiny-server spencercastro$ git checkout branch RmarkdownnTests[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kpsu[K[Kush orgin[K[K[Kigin master
-error: src refspec master does not match any.
-error: failed to push some refs to 'https://github.com/sccastro/shiny-server'
-]0;~/Documents/shiny-serverSpencers-MacBook-Air-2:shiny-server spencercastro$ git status
-On branch master
-
-Initial commit
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	[31m.RData[m
-	[31m.Rhistory[m
-	[31m.Rproj.user/[m
-	[31m1-example.Rmd[m
-	[31m3-inline.Rmd[m
-	[31mR-3.4.4.pkg[m
-	[31m_notes/[m
-	[31m_site.yml[m
-	[31mexampleconfig.txt[m
-	[31mimages/[m
-	[31mindex.Rmd[m
-	[31msample-apps/[m
-	[31mshiny-server.Rproj[m
-
-nothing added to commit but untracked files present (use "git add" to track)
-]0;~/Documents/shiny-serverSpencers-MacBook-Air-2:shiny-server spencercastro$ git add .

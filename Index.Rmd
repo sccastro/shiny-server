@@ -56,3 +56,39 @@ Note the use of the `height` parameter to determine how much vertical space the 
 You can also use the `shinyApp` function to define an application inline rather then in an external directory.
 
 In all of R code chunks above the `echo = FALSE` attribute is used. This is to prevent the R code within the chunk from rendering in the document alongside the Shiny components.
+
+```{r dir, echo=FALSE}
+# Define UI
+ui <- pageWithSidebar(
+# App title ----
+headerPanel("Open a File and Show Contents"),
+# Sidebar panel for inputs ----
+    sidebarPanel(
+    label="Data Source",fileInput("fileName", "File Name")),
+
+# Main panel for displaying outputs ----
+mainPanel(
+    textOutput(outputId = "text"))
+)
+
+# Define server logic
+server <- function(input, output) {
+
+inputData <- reactive ({
+  if (is.null(input$fileName)) return(NULL)
+  inFile <- input$fileName
+  conInFile <- file(inFile$datapath,open='read')
+  inData <- readLines(conInFile)
+  close (conInFile)
+  return (inData)
+})
+
+output$text <- renderText ({
+  inData <- inputData()
+  inData
+})
+}
+
+shinyApp(ui, server)
+```
+

@@ -1,94 +1,75 @@
 ---
-title: "Homepage"
-author: "Spencer"
-date: "2024-02-03"
-output: html_document
-runtime: shiny
+title: "Tutorial"
+output: learnr::tutorial
+runtime: shiny_prerendered
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
-This R Markdown document is made interactive using Shiny. Unlike the more traditional workflow of creating static reports, you can now create documents that allow your readers to change the assumptions underlying your analysis and see the results immediately.
 
-To learn more, see [Interactive Documents](http://rmarkdown.rstudio.com/authoring_shiny.html).
+## Topic 1
 
-[Link to data transformation](03_DataTransformation.html)
+### Exercise 
 
-## Inputs and Outputs
+*Here's a simple exercise with an empty code chunk provided for entering the answer.*
 
-You can embed Shiny inputs and outputs in your document. Outputs are automatically updated whenever inputs change. This demonstrates how a standard R plot can be made interactive by wrapping it in the Shiny `renderPlot` function. The `selectInput` and `sliderInput` functions create the input widgets used to drive the plot.
+Write the R code required to add two plus two:
 
-```{r eruptions, echo=FALSE}
-inputPanel(
-  selectInput("n_breaks", label = "Number of bins:",
-              choices = c(10, 20, 35, 50), selected = 20),
-  
-  sliderInput("bw_adjust", label = "Bandwidth adjustment:",
-              min = 0.2, max = 2, value = 1, step = 0.2)
-)
+```{r two-plus-two, exercise=TRUE}
 
-renderPlot({
-  hist(faithful$eruptions, probability = TRUE, breaks = as.numeric(input$n_breaks),
-       xlab = "Duration (minutes)", main = "Geyser eruption duration")
-  
-  dens <- density(faithful$eruptions, adjust = input$bw_adjust)
-  lines(dens, col = "blue")
-})
 ```
 
-## Embedded Application
+### Exercise with Code
 
-It's also possible to embed an entire Shiny application within an R Markdown document using the `shinyAppDir` function. This example embeds a Shiny application located in another directory:
+*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
 
-```{r tabsets, echo=FALSE}
-shinyAppDir(
-  system.file("examples/06_tabsets", package = "shiny"),
-  options = list(
-    width = "100%", height = 550
+Now write a function that adds any two numbers and then call it:
+
+```{r add-function, exercise=TRUE, exercise.lines = 5}
+add <- function() {
+  
+}
+```
+
+## Topic 2
+
+### Exercise with Hint
+
+*Here's an exercise where the chunk is pre-evaluated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
+
+Modify the following code to limit the number of rows printed to 5:
+
+```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
+mtcars
+```
+
+```{r print-limit-hint}
+head(mtcars)
+```
+
+### Quiz
+
+*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
+
+Some questions to verify that you understand the purposes of various base and recommended R packages:
+
+```{r quiz}
+quiz(
+  question("Which package contains functions for installing other R packages?",
+    answer("base"),
+    answer("tools"),
+    answer("utils", correct = TRUE),
+    answer("codetools")
+  ),
+  question("Which of the R packages listed below are used to create plots?",
+    answer("lattice", correct = TRUE),
+    answer("tools"),
+    answer("stats"),
+    answer("grid", correct = TRUE)
   )
 )
-```
-
-Note the use of the `height` parameter to determine how much vertical space the embedded application should occupy.
-
-You can also use the `shinyApp` function to define an application inline rather then in an external directory.
-
-In all of R code chunks above the `echo = FALSE` attribute is used. This is to prevent the R code within the chunk from rendering in the document alongside the Shiny components.
-
-```{r dir, echo=FALSE}
-# Define UI
-ui <- pageWithSidebar(
-# App title ----
-headerPanel("Open a File and Show Contents"),
-# Sidebar panel for inputs ----
-    sidebarPanel(
-    label="Data Source",fileInput("fileName", "File Name")),
-
-# Main panel for displaying outputs ----
-mainPanel(
-    textOutput(outputId = "text"))
-)
-
-# Define server logic
-server <- function(input, output) {
-
-inputData <- reactive ({
-  if (is.null(input$fileName)) return(NULL)
-  inFile <- input$fileName
-  conInFile <- file(inFile$datapath,open='read')
-  inData <- readLines(conInFile)
-  close (conInFile)
-  return (inData)
-})
-
-output$text <- renderText ({
-  inData <- inputData()
-  inData
-})
-}
-
-shinyApp(ui, server)
 ```
 

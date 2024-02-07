@@ -2,6 +2,9 @@
 title: "Data Transformation"
 output: learnr::tutorial
 runtime: shiny_prerendered
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 # Data Transformation
@@ -26,6 +29,11 @@ First off...
 
 This challenge is to understand and use this function to read in a
 series of csv files and transform them into one data.frame.
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo=FALSE)
+```
 
 ```{r challenge, eval=FALSE}
 
@@ -279,6 +287,24 @@ anticipatory, and the late responses as outliers.
 
 ```{r challenge1, results='hide', eval=FALSE}
 newdf <- ...
+```
+
+```{r challenge1.1, excercise=TRUE}
+newdf <- ...
+
+ccolor %>%
+  filter(!complete.cases(.))
+
+ccolor %>%
+  filter(!is.na(RT))
+
+as_tibble(ccolor %>%
+  na.omit())
+
+newdf <- ccolor %>%
+  na.omit()
+
+
 ```
 
 **Challenge 2**: Filter out RT's below 150 milliseconds and show how

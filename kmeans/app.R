@@ -3,10 +3,10 @@
 palette(c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3",
   "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999"))
 
-library(shiny)
+# library(shiny)
 
 #Let's remember what the dataset iris looks like
-View(iris)
+# View(iris)
 
 ui <- fluidPage(
   headerPanel('Iris k-means clustering'), #This is the title
